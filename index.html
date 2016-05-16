@@ -115,7 +115,17 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1、sql优化基础<br>  方法:</p>
+        <p>1、sql优化核心<br>    方法：<br>        减少请求行数<br>        减少io<br>        限制结果集<br>        减少抢占(锁)<br>    知识：<br>        要了解数据内核和存储相关机制<br>        了解一些sql处理技术和技巧<br>2、深入学习sql执行计划<br>    Explain<br>        Key_len 联合索引 有意义<br>    需要注意3个：<br>        Type=all<br>        extra出现using filesort<br>        extra中，出现：using tempor<br>3、mysql统计信息收集方式<br>    Mysql_upgrade<br>    表统计信息：行数，表的块数，行平均长度，数据总大小，块大小<br>    例统计信息：例的唯一值，null值,分布<br>    索引统计信息：记录数，总页面数量，总大小，索引基数<br>    系统统计信息：i/o,cpu等<br>    统计信息收集方式<br>        Mysql 打开一个库(-A 参数不会收集)<br>        Show table status;<br>        访问information_schema.tables;<br>        当innodb内部数据变化超过1/16或是修改写入超过：2000 000 000<br>        手工analyze table<br>4、sql优化思路<br>    看架构设计<br>    占比非常小<br>    要注重操作系统硬件方面那</p>
+<pre><code>原则：把做的事情说清楚
+
+定位每天出现最多的sql
+定位业务高峰期的慢sql
+结合缓存
+    优化不动的sql,考虑缓存
+对于特殊统计类的sql可以考虑专用从库执行
+    特殊业务时间点的sql
+sql优化的核心：减小io，减少扫描的行数，限制结果集。
+</code></pre><p>5、sql优化技巧<br>    查询过程</p>
 
       
     </div>
