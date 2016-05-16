@@ -5,49 +5,25 @@
   
   <title>sql优化基础 | 李晓辉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、sql优化核心### 方法：
-    #### 减少请求行数
-    #### 减少io
-    #### 限制结果集
-    #### 减少抢占(锁)
-### 知识：
-    #### 要了解数据内核和存储相关机制
-    #### 了解一些sql处理技术和技巧
-2、深入学习sql执行计划Explain
-    Key_len 联合索引 有意义
-需要注意3个：
-    Type=all">
+  <meta name="description" content="1、sql优化核心方法：减少请求行数减少io限制结果集减少抢占(锁)知识：要了解数据内核和存储相关机制了解一些sql处理技术和技巧2、深入学习sql执行计划ExplainKey_len 联合索引 有意义需要注意3个：Type=allextra出现using filesort
+extra中，出现：using tempor
+3、mysql统计信息收集方式Mysql_upgrade
+表统计信息：行数，表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sql优化基础">
 <meta property="og:url" content="http://yoursite.com/2016/05/16/sql优化基础/index.html">
 <meta property="og:site_name" content="李晓辉的博客">
-<meta property="og:description" content="1、sql优化核心### 方法：
-    #### 减少请求行数
-    #### 减少io
-    #### 限制结果集
-    #### 减少抢占(锁)
-### 知识：
-    #### 要了解数据内核和存储相关机制
-    #### 了解一些sql处理技术和技巧
-2、深入学习sql执行计划Explain
-    Key_len 联合索引 有意义
-需要注意3个：
-    Type=all">
-<meta property="og:updated_time" content="2016-05-16T08:48:26.888Z">
+<meta property="og:description" content="1、sql优化核心方法：减少请求行数减少io限制结果集减少抢占(锁)知识：要了解数据内核和存储相关机制了解一些sql处理技术和技巧2、深入学习sql执行计划ExplainKey_len 联合索引 有意义需要注意3个：Type=allextra出现using filesort
+extra中，出现：using tempor
+3、mysql统计信息收集方式Mysql_upgrade
+表统计信息：行数，表">
+<meta property="og:updated_time" content="2016-05-16T08:50:28.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sql优化基础">
-<meta name="twitter:description" content="1、sql优化核心### 方法：
-    #### 减少请求行数
-    #### 减少io
-    #### 限制结果集
-    #### 减少抢占(锁)
-### 知识：
-    #### 要了解数据内核和存储相关机制
-    #### 了解一些sql处理技术和技巧
-2、深入学习sql执行计划Explain
-    Key_len 联合索引 有意义
-需要注意3个：
-    Type=all">
+<meta name="twitter:description" content="1、sql优化核心方法：减少请求行数减少io限制结果集减少抢占(锁)知识：要了解数据内核和存储相关机制了解一些sql处理技术和技巧2、深入学习sql执行计划ExplainKey_len 联合索引 有意义需要注意3个：Type=allextra出现using filesort
+extra中，出现：using tempor
+3、mysql统计信息收集方式Mysql_upgrade
+表统计信息：行数，表">
   
     <link rel="alternate" href="/atom.xml" title="李晓辉的博客" type="application/atom+xml">
   
@@ -151,20 +127,8 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1、sql优化核心"><a href="#1、sql优化核心" class="headerlink" title="1、sql优化核心"></a>1、sql优化核心</h2><pre><code>### 方法：
-    #### 减少请求行数
-    #### 减少io
-    #### 限制结果集
-    #### 减少抢占(锁)
-### 知识：
-    #### 要了解数据内核和存储相关机制
-    #### 了解一些sql处理技术和技巧
-</code></pre><h2 id="2、深入学习sql执行计划"><a href="#2、深入学习sql执行计划" class="headerlink" title="2、深入学习sql执行计划"></a>2、深入学习sql执行计划</h2><pre><code>Explain
-    Key_len 联合索引 有意义
-需要注意3个：
-    Type=all
-    extra出现using filesort
-    extra中，出现：using tempor
+        <h2 id="1、sql优化核心"><a href="#1、sql优化核心" class="headerlink" title="1、sql优化核心"></a>1、sql优化核心</h2><h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><h4 id="减少请求行数"><a href="#减少请求行数" class="headerlink" title="减少请求行数"></a>减少请求行数</h4><h4 id="减少io"><a href="#减少io" class="headerlink" title="减少io"></a>减少io</h4><h4 id="限制结果集"><a href="#限制结果集" class="headerlink" title="限制结果集"></a>限制结果集</h4><h4 id="减少抢占-锁"><a href="#减少抢占-锁" class="headerlink" title="减少抢占(锁)"></a>减少抢占(锁)</h4><h3 id="知识："><a href="#知识：" class="headerlink" title="知识："></a>知识：</h3><h4 id="要了解数据内核和存储相关机制"><a href="#要了解数据内核和存储相关机制" class="headerlink" title="要了解数据内核和存储相关机制"></a>要了解数据内核和存储相关机制</h4><h4 id="了解一些sql处理技术和技巧"><a href="#了解一些sql处理技术和技巧" class="headerlink" title="了解一些sql处理技术和技巧"></a>了解一些sql处理技术和技巧</h4><h2 id="2、深入学习sql执行计划"><a href="#2、深入学习sql执行计划" class="headerlink" title="2、深入学习sql执行计划"></a>2、深入学习sql执行计划</h2><h3 id="Explain"><a href="#Explain" class="headerlink" title="Explain"></a>Explain</h3><h4 id="Key-len-联合索引-有意义"><a href="#Key-len-联合索引-有意义" class="headerlink" title="Key_len 联合索引 有意义"></a>Key_len 联合索引 有意义</h4><h3 id="需要注意3个："><a href="#需要注意3个：" class="headerlink" title="需要注意3个："></a>需要注意3个：</h3><h4 id="Type-all"><a href="#Type-all" class="headerlink" title="Type=all"></a>Type=all</h4><pre><code>extra出现using filesort
+extra中，出现：using tempor
 </code></pre><h2 id="3、mysql统计信息收集方式"><a href="#3、mysql统计信息收集方式" class="headerlink" title="3、mysql统计信息收集方式"></a>3、mysql统计信息收集方式</h2><pre><code>Mysql_upgrade
 表统计信息：行数，表的块数，行平均长度，数据总大小，块大小
 例统计信息：例的唯一值，null值,分布
