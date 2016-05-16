@@ -261,21 +261,21 @@ var duoshuoQuery = {short_name:"lxh0733"};
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1、sql优化核心"><a href="#1、sql优化核心" class="headerlink" title="1、sql优化核心"></a>1、sql优化核心</h1><pre><code>##方法：
-    减少请求行数
-    减少io
-    限制结果集
-    减少抢占(锁)
-知识：
-    要了解数据内核和存储相关机制
-    了解一些sql处理技术和技巧
-</code></pre><h1 id="2、深入学习sql执行计划"><a href="#2、深入学习sql执行计划" class="headerlink" title="2、深入学习sql执行计划"></a>2、深入学习sql执行计划</h1><pre><code>Explain
+        <h2 id="1、sql优化核心"><a href="#1、sql优化核心" class="headerlink" title="1、sql优化核心"></a>1、sql优化核心</h2><pre><code>### 方法：
+    #### 减少请求行数
+    #### 减少io
+    #### 限制结果集
+    #### 减少抢占(锁)
+### 知识：
+    #### 要了解数据内核和存储相关机制
+    #### 了解一些sql处理技术和技巧
+</code></pre><h2 id="2、深入学习sql执行计划"><a href="#2、深入学习sql执行计划" class="headerlink" title="2、深入学习sql执行计划"></a>2、深入学习sql执行计划</h2><pre><code>Explain
     Key_len 联合索引 有意义
 需要注意3个：
     Type=all
     extra出现using filesort
     extra中，出现：using tempor
-</code></pre><h1 id="3、mysql统计信息收集方式"><a href="#3、mysql统计信息收集方式" class="headerlink" title="3、mysql统计信息收集方式"></a>3、mysql统计信息收集方式</h1><pre><code>Mysql_upgrade
+</code></pre><h2 id="3、mysql统计信息收集方式"><a href="#3、mysql统计信息收集方式" class="headerlink" title="3、mysql统计信息收集方式"></a>3、mysql统计信息收集方式</h2><pre><code>Mysql_upgrade
 表统计信息：行数，表的块数，行平均长度，数据总大小，块大小
 例统计信息：例的唯一值，null值,分布
 索引统计信息：记录数，总页面数量，总大小，索引基数

@@ -5,55 +5,49 @@
   
   <title>sql优化基础 | 李晓辉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、sql优化核心##方法：
-    减少请求行数
-    减少io
-    限制结果集
-    减少抢占(锁)
-知识：
-    要了解数据内核和存储相关机制
-    了解一些sql处理技术和技巧
+  <meta name="description" content="1、sql优化核心### 方法：
+    #### 减少请求行数
+    #### 减少io
+    #### 限制结果集
+    #### 减少抢占(锁)
+### 知识：
+    #### 要了解数据内核和存储相关机制
+    #### 了解一些sql处理技术和技巧
 2、深入学习sql执行计划Explain
     Key_len 联合索引 有意义
 需要注意3个：
-    Type=all
-    extra出现using filesort
-    extra中，出">
+    Type=all">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sql优化基础">
 <meta property="og:url" content="http://yoursite.com/2016/05/16/sql优化基础/index.html">
 <meta property="og:site_name" content="李晓辉的博客">
-<meta property="og:description" content="1、sql优化核心##方法：
-    减少请求行数
-    减少io
-    限制结果集
-    减少抢占(锁)
-知识：
-    要了解数据内核和存储相关机制
-    了解一些sql处理技术和技巧
+<meta property="og:description" content="1、sql优化核心### 方法：
+    #### 减少请求行数
+    #### 减少io
+    #### 限制结果集
+    #### 减少抢占(锁)
+### 知识：
+    #### 要了解数据内核和存储相关机制
+    #### 了解一些sql处理技术和技巧
 2、深入学习sql执行计划Explain
     Key_len 联合索引 有意义
 需要注意3个：
-    Type=all
-    extra出现using filesort
-    extra中，出">
-<meta property="og:updated_time" content="2016-05-16T08:47:05.351Z">
+    Type=all">
+<meta property="og:updated_time" content="2016-05-16T08:48:26.888Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sql优化基础">
-<meta name="twitter:description" content="1、sql优化核心##方法：
-    减少请求行数
-    减少io
-    限制结果集
-    减少抢占(锁)
-知识：
-    要了解数据内核和存储相关机制
-    了解一些sql处理技术和技巧
+<meta name="twitter:description" content="1、sql优化核心### 方法：
+    #### 减少请求行数
+    #### 减少io
+    #### 限制结果集
+    #### 减少抢占(锁)
+### 知识：
+    #### 要了解数据内核和存储相关机制
+    #### 了解一些sql处理技术和技巧
 2、深入学习sql执行计划Explain
     Key_len 联合索引 有意义
 需要注意3个：
-    Type=all
-    extra出现using filesort
-    extra中，出">
+    Type=all">
   
     <link rel="alternate" href="/atom.xml" title="李晓辉的博客" type="application/atom+xml">
   
@@ -157,21 +151,21 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1、sql优化核心"><a href="#1、sql优化核心" class="headerlink" title="1、sql优化核心"></a>1、sql优化核心</h1><pre><code>##方法：
-    减少请求行数
-    减少io
-    限制结果集
-    减少抢占(锁)
-知识：
-    要了解数据内核和存储相关机制
-    了解一些sql处理技术和技巧
-</code></pre><h1 id="2、深入学习sql执行计划"><a href="#2、深入学习sql执行计划" class="headerlink" title="2、深入学习sql执行计划"></a>2、深入学习sql执行计划</h1><pre><code>Explain
+        <h2 id="1、sql优化核心"><a href="#1、sql优化核心" class="headerlink" title="1、sql优化核心"></a>1、sql优化核心</h2><pre><code>### 方法：
+    #### 减少请求行数
+    #### 减少io
+    #### 限制结果集
+    #### 减少抢占(锁)
+### 知识：
+    #### 要了解数据内核和存储相关机制
+    #### 了解一些sql处理技术和技巧
+</code></pre><h2 id="2、深入学习sql执行计划"><a href="#2、深入学习sql执行计划" class="headerlink" title="2、深入学习sql执行计划"></a>2、深入学习sql执行计划</h2><pre><code>Explain
     Key_len 联合索引 有意义
 需要注意3个：
     Type=all
     extra出现using filesort
     extra中，出现：using tempor
-</code></pre><h1 id="3、mysql统计信息收集方式"><a href="#3、mysql统计信息收集方式" class="headerlink" title="3、mysql统计信息收集方式"></a>3、mysql统计信息收集方式</h1><pre><code>Mysql_upgrade
+</code></pre><h2 id="3、mysql统计信息收集方式"><a href="#3、mysql统计信息收集方式" class="headerlink" title="3、mysql统计信息收集方式"></a>3、mysql统计信息收集方式</h2><pre><code>Mysql_upgrade
 表统计信息：行数，表的块数，行平均长度，数据总大小，块大小
 例统计信息：例的唯一值，null值,分布
 索引统计信息：记录数，总页面数量，总大小，索引基数
